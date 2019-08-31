@@ -48,9 +48,9 @@
       $process = isset($_SESSION['process']);
 
       if (isset( $_SESSION['entry_state_has_zones'])) {
-        $entry_state_has_zones = $_SESSION['entry_state_has_zones'];
+        $_SESSION['entry_state_has_zones'] = $_SESSION['entry_state_has_zones'];
       } else {
-        $entry_state_has_zones = false;
+        $_SESSION['entry_state_has_zones'] = false;
       }
 
       if (isset( $_SESSION['entry_state_has_zones'])) {
@@ -59,9 +59,11 @@
         $country = null;
       }
 
-      $default_country_pro = CreateAccount::getCountryPro();
-
-      if (!isset($default_country_pro)) $default_country_pro = HTML::sanitize($_POST['country']);
+      if (isset($_POST['country']))  {
+        $default_country_pro = HTML::sanitize($_POST['country']);
+      } else {
+        $default_country_pro = CreateAccount::getCountryPro();
+      }
 
       $create_account = '<!-- Start create_account_introduction start -->' . "\n";
 
