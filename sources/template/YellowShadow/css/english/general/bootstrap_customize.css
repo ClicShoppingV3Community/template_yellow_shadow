@@ -186,7 +186,6 @@ blockquote {
 
 .card {
   border-radius: 0rem;
-
 }
 
 .card-block {
@@ -295,6 +294,10 @@ blockquote {
   background-color: #fff;
 }
 
+.breadcrumb-item+.breadcrumb-item::before {
+  padding-right: 0rem;
+  content: "";
+}
 /***********************************************/
 /* flexbox  */
 /**********************************************/
