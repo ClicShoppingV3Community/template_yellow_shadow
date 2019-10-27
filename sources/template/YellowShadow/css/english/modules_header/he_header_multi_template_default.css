@@ -29,7 +29,7 @@ span.headerMultiTemplateDefaultShoppingCartImage {
   padding-top:2rem;
 }
 
-i.headerMultiTemplateDefaultShoppingCart {
+div.headerMultiTemplateDefaultShoppingCart {
   color: #edac27;
   font-weight: bold;
   padding-right: 0.5rem;
