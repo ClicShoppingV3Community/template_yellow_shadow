@@ -48,9 +48,9 @@
       $process = isset($_SESSION['process']);
 
       if (isset( $_SESSION['entry_state_has_zones'])) {
-        $_SESSION['entry_state_has_zones'] = $_SESSION['entry_state_has_zones'];
+        $entry_state_has_zones = $_SESSION['entry_state_has_zones'];
       } else {
-        $_SESSION['entry_state_has_zones'] = false;
+        $entry_state_has_zones = false;
       }
 
       if (isset( $_SESSION['entry_state_has_zones'])) {
