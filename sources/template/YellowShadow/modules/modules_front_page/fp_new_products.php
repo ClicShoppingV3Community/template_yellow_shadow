@@ -42,6 +42,7 @@
       $CLICSHOPPING_ProductsFunctionTemplate = Registry::get('ProductsFunctionTemplate');
       $CLICSHOPPING_Category = Registry::get('Category');
       $CLICSHOPPING_ProductsAttributes = Registry::get('ProductsAttributes');
+      $CLICSHOPPING_Reviews = Registry::get('Reviews');
 
       $new_products_category_id =  $CLICSHOPPING_Category->getID();
 
