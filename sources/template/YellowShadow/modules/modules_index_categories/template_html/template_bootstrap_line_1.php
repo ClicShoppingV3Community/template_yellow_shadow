@@ -12,7 +12,7 @@
 use ClicShopping\OM\CLICSHOPPING;
 ?>
 <div class="col-md-<?php echo $bootstrap_column; ?> col-md-<?php echo $bootstrap_column; ?>">
-  <div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/Product">
+  <div>
     <div class="col-md-2 float-md-left">
       <div class="text-md-center ModulesIndexCategoriesBoostrapLine1Image">
         <?php echo $products_image; ?>
@@ -20,13 +20,13 @@ use ClicShopping\OM\CLICSHOPPING;
     </div>
     <div class="col-md-6 float-md-left">
       <div>
-        <div class="text-md-center ModulesIndexCategoriesBoostrapLine1Title"><span itemprop="name"><h3><?php echo $products_name; ?></h3></span></div>
+        <div class="text-md-center ModulesIndexCategoriesBoostrapLine1Title"><h3><?php echo $products_name; ?></h3></div>
       </div>
 <?php
   if (!empty($products_short_description)) {
 ?>
       <div>
-        <div class="ModulesIndexCategoriesBoostrapLine1ShortDescription"><span itemprop="description"><?php echo $products_short_description; ?></span></div>
+        <div class="ModulesIndexCategoriesBoostrapLine1ShortDescription"><?php echo $products_short_description; ?></div>
       </div>
 <?php
   }
@@ -48,7 +48,7 @@ use ClicShopping\OM\CLICSHOPPING;
     </div>
     <div class="col-md-4 float-md-right">
       <div class="text-md-center">
-        <div class="ModulesIndexCategoriesBoostrapLine1TextPrice" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price . $ticker; ?></div>
+        <div class="ModulesIndexCategoriesBoostrapLine1TextPrice"><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price . $ticker; ?></div>
       </div>
       <div>
         <div class="ModulesIndexCategoriesBoostrapLine1ProductsQuantityUnit"><?php echo $products_quantity_unit; ?></div>

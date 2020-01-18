@@ -12,7 +12,7 @@
 use ClicShopping\OM\CLICSHOPPING;
 ?>
 <div class="col-md-<?php echo $bootstrap_column; ?> col-md-<?php echo $bootstrap_column; ?>">
-  <div class="card-deck-wrapper" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/Product">
+  <div class="card-deck-wrapper">
     <div class="card-deck">
       <div class="card card-footer">
           <div>
@@ -21,13 +21,13 @@ use ClicShopping\OM\CLICSHOPPING;
               <div class="ModulesFrontPageBoostrapColumn6Image"> <?php echo $products_image; ?></div>
             </div>
             <div class="col-md-9 float-md-right">
-              <div class="ModulesFrontPageBoostrapColumn6Title"><span itemprop="name"><h3><?php echo $products_name; ?></h3></span></div>
+              <div class="ModulesFrontPageBoostrapColumn6Title"><h3><?php echo $products_name; ?></h3></div>
               <div class="separator"></div>
               <div class="separator"></div>
 <?php
   if (!empty($products_short_description)) {
 ?>
-              <div class="ModulesFrontPageBoostrapColumn6ShortDescription"><h3><span itemprop="description"><?php echo $products_short_description; ?></span></h3></div>
+              <div class="ModulesFrontPageBoostrapColumn6ShortDescription"><h3><?php echo $products_short_description; ?></h3></div>
 <?php
   }
 ?>
@@ -54,7 +54,7 @@ use ClicShopping\OM\CLICSHOPPING;
 <?php
   }
 ?>
-                <div class="ModulesFrontPageBoostrapColumn6TextPrice" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price; ?></div>
+                <div class="ModulesFrontPageBoostrapColumn6TextPrice" ><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price; ?></div>
                 <li class="float-md-right">
                   <?php echo  $form; ?>
                   <div class="ModulesFrontPageBoostrapColumn6QuantityMinOrder"><?php echo $input_quantity; ?></div>
