@@ -21,7 +21,7 @@ use ClicShopping\OM\CLICSHOPPING;
               <div class="ModulesFrontPageBoostrapColumn6Image"> <?php echo $products_image; ?></div>
             </div>
             <div class="col-md-9 float-md-right">
-              <div class="ModulesFrontPageBoostrapColumn6Title"><h3><?php echo $products_name; ?></h3></div>
+              <div class="ModulesFrontPageBoostrapColumn6Title"><span itemprop="name"><h3><?php echo $products_name; ?></h3></span></div>
               <div class="separator"></div>
               <div class="separator"></div>
 <?php

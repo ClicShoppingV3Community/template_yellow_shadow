@@ -22,7 +22,7 @@ use ClicShopping\OM\CLICSHOPPING;
             <?php echo $products_image . $ticker; ?>
           </div>
           <div>
-            <div class="ModulesIndexCategoriesBoostrapColumn5Title"><h3><?php echo $products_name; ?></h3></div>
+            <div class="ModulesIndexCategoriesBoostrapColumn5Title"><span itemprop="name"><h3><?php echo $products_name; ?></h3></span></div>
             <div class="separator"></div>
             <div class="separator"></div>
 <?php

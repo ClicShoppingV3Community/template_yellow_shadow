@@ -20,7 +20,7 @@ use ClicShopping\OM\CLICSHOPPING;
     </div>
     <div class="col-md-6 float-md-left">
       <div>
-        <div class="text-md-center ModulesIndexCategoriesBoostrapLine1Title"><h3><?php echo $products_name; ?></h3></div>
+        <div class="text-md-center ModulesIndexCategoriesBoostrapLine1Title"><span itemprop="name"><h3><?php echo $products_name; ?></h3></span></div>
       </div>
 <?php
   if (!empty($products_short_description)) {
