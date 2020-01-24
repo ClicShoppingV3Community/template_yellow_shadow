@@ -44,7 +44,7 @@
 // nbr of column to display  boostrap
         $bootstrap_column = (int)MODULE_FRONT_PAGE_MANUFACTURERS_COLUMNS;
 
-        if (!isset($_GET['manufacturers_id'])) {
+        if (!isset($_GET['manufacturersId'])) {
 
           $Qmanufacturer = $CLICSHOPPING_Db->prepare('select manufacturers_id,
                                                              manufacturers_image,
@@ -76,7 +76,7 @@
                                                        limit :limit
                                                       ');
           $Qmanufacturer->bindInt(':limit', MODULE_FRONT_PAGE_MANUFACTURERS_LIMIT);
-          $Qmanufacturer->bindInt(':manufacturers_id', $_GET['manufacturers_id']);
+          $Qmanufacturer->bindInt(':manufacturers_id', $_GET['manufacturersId']);
 
           $Qmanufacturer->execute();
         }
