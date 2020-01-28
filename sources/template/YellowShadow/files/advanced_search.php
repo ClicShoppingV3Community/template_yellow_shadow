@@ -12,15 +12,16 @@
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\CLICSHOPPING;
 
-  if ( $CLICSHOPPING_MessageStack->exists('search') ) {
-    echo $CLICSHOPPING_MessageStack->get('search');
+  if ( $CLICSHOPPING_MessageStack->exists('main') ) {
+    echo $CLICSHOPPING_MessageStack->get('main');
   }
+
   require_once($CLICSHOPPING_Template->getTemplateFiles('breadcrumb'));
 
   echo HTML::form('advanced_search', CLICSHOPPING::link(null, 'Search&Q'), 'post', 'id="advanced_search" role="form"', ['session_id' => true]);
 ?>
 
-  <script src="<?php echo CLICSHOPPING::link($CLICSHOPPING_Template->getTemplateDefaultJavaScript('clicshopping/general.js')); ?>"></script>
+<script src="<?php echo CLICSHOPPING::link($CLICSHOPPING_Template->getTemplateDefaultJavaScript('clicshopping/general.js')); ?>"></script>
 <section class="advanced_search" id="advanced_search">
   <div class="contentContainer card shadow">
     <div class="contentText">
@@ -30,7 +31,7 @@
         <div class="control-group">
           <div class="controls">
             <div class="buttonSet">
-              <span class="float-md-right"><?php echo HTML::button(CLICSHOPPING::getDef('button_search'), null, null, 'success'); ?></span>
+              <span class="float-md-right"><label for="buttonSearch"><?php echo HTML::button(CLICSHOPPING::getDef('button_search'), null, null, 'success'); ?></label></span>
             </div>
           </div>
       </div>

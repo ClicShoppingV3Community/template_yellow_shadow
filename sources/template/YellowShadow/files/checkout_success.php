@@ -15,10 +15,7 @@
   require_once($CLICSHOPPING_Template->getTemplateFiles('breadcrumb'));
 
   if ( $CLICSHOPPING_MessageStack->exists('checkout_success') ) {
-?>
-    <div class="alert-success" role="alert"><?php echo $CLICSHOPPING_MessageStack->get('checkout_success'); ?></div>
-    <div class="separator"></div>
-<?php
+   echo $CLICSHOPPING_MessageStack->get('main');
   }
 ?>
 <section class="checkout_success" id="checkout_success">
@@ -29,7 +26,7 @@
       <div class="control-group">
         <div class="controls">
           <div class="buttonSet">
-            <span class="float-md-right"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, CLICSHOPPING::link(), 'success'); ?></span>
+            <span class="float-md-right"><label for="buttonContinue"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, CLICSHOPPING::link(), 'success'); ?></label></span>
           </div>
         </div>
       </div>
