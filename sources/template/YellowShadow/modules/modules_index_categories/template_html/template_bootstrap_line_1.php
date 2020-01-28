@@ -66,8 +66,8 @@ use ClicShopping\OM\CLICSHOPPING;
         <div class="text-md-center">
           <div class="ModulesIndexCategoriesBoostrapLine1QuantityMinOrder"><?php echo $input_quantity; ?></div>
           <div style="padding-top:5px;">
-            <span class="ModulesIndexCategoriesBoostrapLine1ViewDetails"><?php echo $button_small_view_details; ?></span>
-            <span class="ModulesIndexCategoriesBoostrapLine1SubmitButton"><?php echo $submit_button; ?></span>
+            <span class="ModulesIndexCategoriesBoostrapLine1ViewDetails"><label for="ModulesIndexCategoriesBoostrapLine1ViewDetails"><?php echo $button_small_view_details; ?></label>&nbsp;</span>
+            <span class="ModulesIndexCategoriesBoostrapLine1SubmitButton"><label for="ModulesIndexCategoriesBoostrapLine1SubmitButton"><?php echo $submit_button; ?></label></span>
           </div>
         </div>
       <?php echo $endform; ?>
