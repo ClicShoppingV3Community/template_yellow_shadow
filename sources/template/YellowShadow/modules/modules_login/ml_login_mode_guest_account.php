@@ -89,7 +89,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Where do you want display the module ?',
+          'configuration_title' => 'Where Do you want to display the module ?',
           'configuration_key' => 'MODULE_LOGIN_MODE_GUEST_ACCOUNT_POSITION',
           'configuration_value' => 'float-none',
           'configuration_description' => 'Select where you want display the module',

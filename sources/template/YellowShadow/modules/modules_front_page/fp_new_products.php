@@ -270,7 +270,7 @@
                 $tag = $CLICSHOPPING_ProductsFunctionTemplate->getProductsHeadTag($products_id);
 
                 $products_tag = '';
-                if (!is_null($tag)) {
+                if (is_array($tag)) {
                   foreach ($tag as $value) {
                     $products_tag .= '#<span class="productTag">' . HTML::link(CLICSHOPPING::link(null, 'Search&keywords='. HTML::outputProtected(utf8_decode($value) .'&search_in_description=1&categories_id=&inc_subcat=1'), 'rel="nofollow"'), $value) . '</span> ';
                   }
@@ -348,7 +348,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Do you want display the title ?',
+          'configuration_title' => 'Do you want to display the title ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_NEW_PRODUCTS_FRONT_TITLE',
           'configuration_value' => 'True',
           'configuration_description' => 'Display the title',
@@ -363,7 +363,7 @@
           'configuration_title' => 'Please indicate the number to display',
           'configuration_key' => 'MODULE_FRONT_PAGE_NEW_PRODUCTS_MAX_DISPLAY',
           'configuration_value' => '6',
-          'configuration_description' => 'VIndicate the number to display.',
+          'configuration_description' => 'Indicate the number to display.',
           'configuration_group_id' => '6',
           'sort_order' => '5',
           'set_function' => '',
@@ -384,7 +384,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Do you want display a short description ?',
+          'configuration_title' => 'Do you want to display a short description ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_NEW_PRODUCTS_SHORT_DESCRIPTION',
           'configuration_value' => '0',
           'configuration_description' => 'Please indicate a number of your short description',
@@ -396,7 +396,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Do you want remove words of your short description ?',
+          'configuration_title' => 'Do you want to remove words of your short description ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_NEW_PRODUCTS_SHORT_DESCRIPTION_DELETE_WORLDS',
           'configuration_value' => '0',
           'configuration_description' => 'Please indicate a number',
@@ -408,7 +408,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Do you want display a message News / Specials / Favorites / Featured ?',
+          'configuration_title' => 'Do you want to display a message News / Specials / Favorites / Featured ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_NEW_PRODUCTS_TICKER',
           'configuration_value' => 'False',
           'configuration_description' => 'Display a message News / Specials / Favorites / Featured',
@@ -420,7 +420,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Do you want display the discount pourcentage (specials) ?',
+          'configuration_title' => 'Do you want to display the discount pourcentage (specials) ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_NEW_PRODUCTS_POURCENTAGE_TICKER',
           'configuration_value' => 'False',
           'configuration_description' => 'Display the discount pourcentage (specials)',
@@ -432,7 +432,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Do you want display the stock ?',
+          'configuration_title' => 'Do you want to display the stock ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_NEW_PRODUCTS_DISPLAY_STOCK',
           'configuration_value' => 'none',
           'configuration_description' => 'Display the stock (in stock, exhaused, out of stock) ?',
@@ -456,7 +456,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Do you want remove the details button ?',
+          'configuration_title' => 'Do you want to remove the details button ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_NEW_PRODUCTS_DELETE_BUY_BUTTON',
           'configuration_value' => 'False',
           'configuration_description' => 'Remove the button details',
