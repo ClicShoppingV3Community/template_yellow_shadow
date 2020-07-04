@@ -47,9 +47,9 @@
           $login_mode_guest_account .= ob_get_clean();
 
           $login_mode_guest_account .= '<!-- login_mode_guest_accoun  end-->' . "\n";
-        }
 
-        $CLICSHOPPING_Template->addBlock($login_mode_guest_account, $this->group);
+          $CLICSHOPPING_Template->addBlock($login_mode_guest_account, $this->group);
+        }
       }
     } // function execute
 
