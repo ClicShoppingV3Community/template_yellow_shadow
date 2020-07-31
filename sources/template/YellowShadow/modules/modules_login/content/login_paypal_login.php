@@ -45,7 +45,7 @@ use ClicShopping\OM\CLICSHOPPING;
     "appid": "<?php echo (CLICSHOPPING_APP_PAYPAL_LOGIN_STATUS == '1') ? CLICSHOPPING_APP_PAYPAL_LOGIN_LIVE_CLIENT_ID : CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_CLIENT_ID; ?>",
     "scopes": "<?php echo implode(' ', $use_scopes); ?>",
     "containerid": "PayPalLoginButton",
-    "returnurl": "<?php echo str_replace('&amp;', '&', CLICSHOPPING::link(null, 'Account&Login&action=paypal_login', false, false)); ?>"
+    "returnurl": "<?php echo str_replace('&amp;', '&', CLICSHOPPING::link(null, 'Account&LogIn&action=paypal_login', false, false)); ?>"
     });
   });
   </script>

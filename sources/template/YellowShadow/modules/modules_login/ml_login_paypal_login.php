@@ -147,7 +147,7 @@
         $_SESSION['paypal_login_customer_id'] = false;
 
         $params = ['code' => $_GET['code'],
-                   'redirect_uri' => str_replace('&amp;', '&', CLICSHOPPING::link(null, 'Account&Login&action=paypal_login', false, false))
+                   'redirect_uri' => str_replace('&amp;', '&', CLICSHOPPING::link(null, 'Account&LogIn&action=paypal_login', false, false))
                   ];
 
         $response_token = $this->app->getApiResult($this->code, 'GrantToken', $params);
@@ -396,7 +396,7 @@
 
             $_SESSION['billto'] = $_SESSION['sendto'];
 
-            $return_url = CLICSHOPPING::link(null, 'Account&Login&action=paypal_login_process', false, false);
+            $return_url = CLICSHOPPING::link(null, 'Account&LogIn&action=paypal_login_process', false, false);
             }
           }
         }
