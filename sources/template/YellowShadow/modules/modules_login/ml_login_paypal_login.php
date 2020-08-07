@@ -254,7 +254,7 @@
                 $message = html_entity_decode($email_text);
                 $message = str_replace('src="/', 'src="' . HTTP::getShopUrlDomain(), $message);
                 $CLICSHOPPING_Mail->addHtmlCkeditor($message);
-                $CLICSHOPPING_Mail->buildMessage();
+                ;
                 $from = STORE_OWNER_EMAIL_ADDRESS;
 
                 $CLICSHOPPING_Mail->send($name, $email_address, '', $from, $email_subject);
