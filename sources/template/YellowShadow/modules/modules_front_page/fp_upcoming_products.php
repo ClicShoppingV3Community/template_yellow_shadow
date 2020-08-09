@@ -221,7 +221,7 @@
     }
 
     public function keys() {
-      return array (
+      return array(
         'MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_STATUS',
         'MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_FIELD',
         'MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_SORT',

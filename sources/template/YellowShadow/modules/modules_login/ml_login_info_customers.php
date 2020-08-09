@@ -123,7 +123,7 @@
     }
 
     public function keys() {
-      return array (
+      return array(
         'MODULE_LOGIN_INFO_CUSTOMERS_STATUS',
         'MODULE_LOGIN_INFO_CUSTOMERS_CONTENT_WIDTH',
         'MODULE_LOGIN_INFO_CUSTOMERS_SORT_ORDER'

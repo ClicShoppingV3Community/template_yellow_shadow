@@ -238,7 +238,7 @@
     }
 
     public function keys() {
-      return array ('MODULE_INDEX_CATEGORIES_IMAGES_STATUS',
+      return array('MODULE_INDEX_CATEGORIES_IMAGES_STATUS',
                     'MODULE_INDEX_CATEGORIES_IMAGES_BOX_COLUMNS',
                     'MODULE_INDEX_CATEGORIES_IMAGES_SHOW_NAME',
                     'MODULE_INDEX_CATEGORIES_IMAGES_SHOW_IMAGES',

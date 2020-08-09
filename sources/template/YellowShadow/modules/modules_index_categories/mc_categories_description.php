@@ -119,7 +119,7 @@
     }
 
     public function keys() {
-      return array (
+      return array(
         'MODULE_INDEX_CATEGORIES_DESCRIPTION_STATUS',
         'MODULE_INDEX_CATEGORIES_DESCRIPTION_CONTENT_WIDTH',
         'MODULE_INDEX_CATEGORIES_DESCRIPTION_SORT_ORDER'

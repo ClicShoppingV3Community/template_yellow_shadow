@@ -132,7 +132,7 @@
     }
 
     public function keys() {
-      return array (
+      return array(
         'MODULE_LOGIN_SOCIAL_NETWORK_TWITTER_STATUS',
         'MODULE_LOGIN_SOCIAL_NETWORK_TWITTER_SORT_ORDER'
       );
