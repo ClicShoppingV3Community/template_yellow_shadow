@@ -21,7 +21,7 @@
   <div class="separator"></div>
   <div class="contentText">
 <?php
-  if ( $CLICSHOPPING_MessageStack->exists('create_account_pro') ) {
+  if ($CLICSHOPPING_MessageStack->exists('create_account_pro')) {
 ?>
     <div class="alert-warning" role="alert"><?php echo $CLICSHOPPING_MessageStack->get('create_account_pro'); ?></div>
     <div class="separator"></div>
@@ -295,7 +295,7 @@
           $Qcheck->execute();
 
 
-          while ($Qcheck->fetch() ) {
+          while ($Qcheck->fetch()) {
             $zones_array[] = ['id' => $Qcheck->value('zone_name'),
                               'text' => $Qcheck->value('zone_name')
                              ];

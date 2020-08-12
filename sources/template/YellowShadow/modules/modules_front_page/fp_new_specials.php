@@ -51,7 +51,7 @@
         if (MODULE_FRONT_PAGE_SPECIALS_PRODUCTS_MAX_DISPLAY != 0) {
 
           if ($CLICSHOPPING_Customer->getCustomersGroupID() != 0) {
-            if ( (!isset($new_products_category_id)) || ($new_products_category_id == 0) ) {
+            if ( (!isset($new_products_category_id)) || ($new_products_category_id == 0)) {
 // Requetes SQL pour afficher les nouveaux produits groupe B2B lors que l'on ne ce trouve pas dans une categorie
               $Qproduct = $CLICSHOPPING_Db->prepare('select p.products_id,
                                                             p.products_quantity as in_stock
@@ -130,7 +130,7 @@
               $Qproduct->execute();
             }
           } else {
-            if ( (!isset($new_products_category_id)) || ($new_products_category_id == 0) ) {
+            if ( (!isset($new_products_category_id)) || ($new_products_category_id == 0)) {
 // Requetes SQL pour afficher les nouveaux produits lors que l'on ne se trouve pas dans une categorie
 
               $Qproduct = $CLICSHOPPING_Db->prepare('select p.products_id,
@@ -254,7 +254,7 @@
               if (MODULE_FRONT_PAGE_SPECIALS_PRODUCTS_DELETE_BUY_BUTTON == 'False') {
                 if ($CLICSHOPPING_ProductsCommon->getProductsMinimumQuantity($products_id) != 0 && $CLICSHOPPING_ProductsCommon->getProductsQuantity($products_id) != 0) {
                   if ($CLICSHOPPING_ProductsAttributes->getHasProductAttributes($products_id) === false) {
-                    $form =  HTML::form('cart_quantity', CLICSHOPPING::link(null, 'Cart&Add' ),'post','class="justify-content-center"', ['tokenize' => true]). "\n";
+                    $form = HTML::form('cart_quantity', CLICSHOPPING::link(null, 'Cart&Add' ),'post','class="justify-content-center"', ['tokenize' => true]). "\n";
                     $form .= HTML::hiddenField('products_id', $products_id);
                     $endform = '</form>';
                     $submit_button = $CLICSHOPPING_ProductsCommon->getProductsBuyButton($products_id);

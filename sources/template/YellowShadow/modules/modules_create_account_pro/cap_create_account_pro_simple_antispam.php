@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('modules_create_account_pro_simple_antispam_title');
       $this->description = CLICSHOPPING::getDef('modules_create_account_pro_simple_antispam_description');
 
-      if ( defined('MODULES_CREATE_ACCOUNT_PRO_SIMPLE_ANTISPAM_STATUS') ) {
+      if (defined('MODULES_CREATE_ACCOUNT_PRO_SIMPLE_ANTISPAM_STATUS')) {
         $this->sort_order = (int)MODULES_CREATE_ACCOUNT_PRO_SIMPLE_ANTISPAM_SORT_ORDER;
         $this->enabled = (MODULES_CREATE_ACCOUNT_PRO_SIMPLE_ANTISPAM_STATUS == 'True');
       }
@@ -41,7 +41,7 @@
     public function execute() {
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      if (isset($_GET['Account'] ) && isset($_GET['CreatePro']) && !isset($_GET['Success']) ) {
+      if (isset($_GET['Account']) && isset($_GET['CreatePro']) && !isset($_GET['Success'])) {
         $content_width = (int)MODULES_CREATE_ACCOUNT_PRO_SIMPLE_ANTISPAM_CONTENT_WIDTH;
 
         $antispam = AntispamClass::getConfirmationSimpleAntiSpam();

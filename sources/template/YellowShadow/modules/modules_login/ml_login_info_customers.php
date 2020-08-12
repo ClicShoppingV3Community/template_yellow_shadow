@@ -52,7 +52,7 @@
             }
           }
         }
-        $login_information_customers = '<!-- login_info_customers start -->'. "\n";
+        $login_information_customers = '<!-- login_info_customers start -->' . "\n";
 
         ob_start();
         require_once($CLICSHOPPING_Template->getTemplateModules($this->group . '/content/login_info_customers'));

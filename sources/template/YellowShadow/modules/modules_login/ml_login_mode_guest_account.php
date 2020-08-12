@@ -39,7 +39,7 @@
         $content_width = (int)MODULE_LOGIN_MODE_GUEST_ACCOUNT_CONTENT_WIDTH;
 
         if (MODE_MANAGEMENT_B2C_B2B == 'B2C_B2B' || MODE_B2B_B2C == 'false')  {
-          $login_mode_guest_account = '<!-- login_mode_guest_accoun start -->'. "\n";
+          $login_mode_guest_account = '<!-- login_mode_guest_accoun start -->' . "\n";
 
           ob_start();
           require_once($CLICSHOPPING_Template->getTemplateModules($this->group . '/content/login_mode_guest_account'));

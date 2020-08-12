@@ -136,7 +136,7 @@
               $categories_url = $CLICSHOPPING_rewriteUrl->getCategoryImageUrl($cPath_new);
 
               $link_categories_image = HTML::link($categories_url, HTML::image($CLICSHOPPING_Template->getDirectoryTemplateImages() . $c['categories_image'], HTML::outputProtected($c['categories_name']), (int)SUBCATEGORY_IMAGE_WIDTH, (int)SUBCATEGORY_IMAGE_HEIGHT, null, true));
-              $link_categories =  HTML::link($categories_url, $c['categories_name']);
+              $link_categories = HTML::link($categories_url, $c['categories_name']);
 
               ob_start();
               require$CLICSHOPPING_Template->getTemplateModules($this->group . '/content/categories_images');

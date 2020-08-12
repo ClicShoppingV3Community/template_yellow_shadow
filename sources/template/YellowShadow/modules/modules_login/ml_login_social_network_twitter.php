@@ -29,11 +29,11 @@
       $CLICSHOPPING_Template = Registry::get('Template');
 
       if (isset($_GET['Account']) && isset($_GET['LogIn'])) {
-        $template = '<!-- login_social_network_ start -->'. "\n";
+        $template = '<!-- login_social_network_ start -->' . "\n";
 
 /*
 
-      if ( isset($_GET['action']) ) {
+      if ( isset($_GET['action'])) {
         var_dump($_GET['action']);
         exit;
 
@@ -155,7 +155,7 @@
     $provider = $_GET['provider'];
     $provider = @trim(strip_tags( $provider ));
 
-    if (!$CLICSHOPPING_HybridAuthIdentity->validateProviderName($provider) ) {
+    if (!$CLICSHOPPING_HybridAuthIdentity->validateProviderName($provider)) {
       var_dump('500 Invalid Action. Please try again.');
       return CLICSHOPPING::redirect(null, null);
     }
