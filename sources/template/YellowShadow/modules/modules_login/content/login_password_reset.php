@@ -45,7 +45,7 @@ use ClicShopping\OM\HTML;
     <div class="control-group">
       <div class="controls">
         <div class="buttonSet">
-          <span class="float-md-right"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, null, 'success'); ?></span>
+          <span class="float-end"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, null, 'success'); ?></span>
         </div>
       </div>
     </div>

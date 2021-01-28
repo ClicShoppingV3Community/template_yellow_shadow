@@ -17,10 +17,10 @@ use ClicShopping\OM\CLICSHOPPING;
       <div class="card card-footer">
           <div>
             <?php echo $ticker; ?>
-            <div class="col-md-3 float-md-left">
+            <div class="col-md-3 float-start">
               <div class="ModulesProductsNewBoostrapColumn6Image"><?php echo $products_image; ?></div>
             </div>
-            <div class="col-md-9 float-md-right">
+            <div class="col-md-9 float-end">
               <div class="ModulesProductsNewBoostrapColumn6Title"><h3><?php echo $products_name; ?></h3></div>
               <div class="separator"></div>
               <div class="separator"></div>
@@ -55,7 +55,7 @@ use ClicShopping\OM\CLICSHOPPING;
   }
 ?>
                 <div class="ModulesProductsNewBoostrapColumn6TextPrice" ><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price; ?></div>
-                <li class="float-md-right">
+                <li class="float-end">
                   <?php echo  $form; ?>
                   <div class="ModulesProductsNewBoostrapColumn6QuantityMinOrder"><?php echo $input_quantity; ?></div>
                   <span class="ModulesProductsNewBoostrapColumn6ViewDetails"><label for="ModulesProductsNewBoostrapColumn6ViewDetails"><?php echo $button_small_view_details; ?></label>&nbsp;</span>

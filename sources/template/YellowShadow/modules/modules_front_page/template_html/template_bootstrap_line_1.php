@@ -13,12 +13,12 @@ use ClicShopping\OM\CLICSHOPPING;
 ?>
 <div class="col-md-<?php echo $bootstrap_column; ?> col-md-<?php echo $bootstrap_column; ?>">
   <div>
-    <div class="col-md-2 float-md-left">
+    <div class="col-md-2 float-start">
       <div class="ModulesFrontPageBoostrapLine1Image">
         <?php echo $products_image; ?>
       </div>
     </div>
-    <div class="col-md-6 float-md-left">
+    <div class="col-md-6 float-start">
       <div>
         <div class="ModulesFrontPageBoostrapLine1Title"><h3><?php echo $products_name; ?></h3></div>
       </div>
@@ -46,7 +46,7 @@ use ClicShopping\OM\CLICSHOPPING;
 ?>
       </div>
     </div>
-    <div class="col-md-4 float-md-right">
+    <div class="col-md-4 float-end">
       <div class="text-md-center">
         <div class="ModulesFrontPageBoostrapLine1TextPrice"><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price . $ticker; ?></div>
       </div>

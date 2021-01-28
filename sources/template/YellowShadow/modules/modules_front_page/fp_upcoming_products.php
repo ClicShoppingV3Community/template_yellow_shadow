@@ -111,8 +111,8 @@
 
 // Start the table to display the product data
            $upcoming_prods_content .= '<div class="contentText">';
-           $upcoming_prods_content .= '<div class="float-md-left headingUpcomingProducts">&nbsp;' . CLICSHOPPING::getDef('table_heading_upcoming_products') . '&nbsp;</div>';
-           $upcoming_prods_content .= '<div class="float-md-right headingDateExpected">&nbsp;' . CLICSHOPPING::getDef('table_heading_date_expected') . '&nbsp;</div>';
+           $upcoming_prods_content .= '<div class="float-start headingUpcomingProducts">&nbsp;' . CLICSHOPPING::getDef('table_heading_upcoming_products') . '&nbsp;</div>';
+           $upcoming_prods_content .= '<div class="float-end headingDateExpected">&nbsp;' . CLICSHOPPING::getDef('table_heading_date_expected') . '&nbsp;</div>';
            $upcoming_prods_content .= '<div class="clearfix"></div>';
            $upcoming_prods_content .= '<div class="hr"></div>';
            $upcoming_prods_content .= '<div class="separator"></div>';
@@ -122,8 +122,8 @@
            do {
              $products_name_url = $CLICSHOPPING_ProductsFunctionTemplate->getProductsUrlRewrited()->getProductNameUrl($Qproducts->valueInt('products_id'));
 
-              $upcoming_prods_content .= '<div class="float-md-left">&nbsp;' . HTML::link($products_name_url, '<span itemprop="itemListElement"><strong>' . $Qproducts->value('products_name') . '</strong></span>') . '</div>';
-              $upcoming_prods_content .= '<div class="float-md-right">' . DateTime::toShort($Qproducts->value('date_expected')) . '</div>';
+              $upcoming_prods_content .= '<div class="float-start">&nbsp;' . HTML::link($products_name_url, '<span itemprop="itemListElement"><strong>' . $Qproducts->value('products_name') . '</strong></span>') . '</div>';
+              $upcoming_prods_content .= '<div class="float-end">' . DateTime::toShort($Qproducts->value('date_expected')) . '</div>';
               $upcoming_prods_content .= '<div class="clearfix"></div>' . "\n";
            } while ($Qproducts->fetch());
 

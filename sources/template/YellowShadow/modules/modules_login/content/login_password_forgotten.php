@@ -35,7 +35,7 @@ use ClicShopping\OM\HTML;
         <div class="controls">
           <div class="buttonSet">
             <span class="col-md-2"><?php echo HTML::button(CLICSHOPPING::getDef('button_back'), null, CLICSHOPPING::link(null, 'Account&LogIn'), 'primary');  ?></span>
-            <span class="col-md-2 float-md-right text-md-right"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, null, 'success');  ?></span>
+            <span class="col-md-2 float-end text-md-right"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, null, 'success');  ?></span>
           </div>
         </div>
       </div>
