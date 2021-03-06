@@ -12,7 +12,7 @@
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\CLICSHOPPING;
 
-  if (defined('MODULE_LOGIN_MODE_B2B_B2C_STATUS')) {
+  if (\defined('MODULE_LOGIN_MODE_B2B_B2C_STATUS')) {
     echo '<div style="padding-top:3rem;"></div>';
   }
 ?>

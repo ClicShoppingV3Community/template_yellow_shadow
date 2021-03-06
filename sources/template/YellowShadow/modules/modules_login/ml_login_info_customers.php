@@ -13,8 +13,8 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class ml_login_info_customers {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -27,7 +27,7 @@
       $this->title = CLICSHOPPING::getDef('module_login_info_customers');
       $this->description = CLICSHOPPING::getDef('module_login_info_customers_description');
 
-      if (defined('MODULE_LOGIN_INFO_CUSTOMERS_STATUS')) {
+      if (\defined('MODULE_LOGIN_INFO_CUSTOMERS_STATUS')) {
         $this->sort_order = MODULE_LOGIN_INFO_CUSTOMERS_SORT_ORDER;
         $this->enabled = (MODULE_LOGIN_INFO_CUSTOMERS_STATUS == 'True');
       }
@@ -43,9 +43,9 @@
 
         $free_amount = '';
 	
-        if (defined('MODULE_ORDER_TOTAL_SHIPPING_FREE_SHIPPING')) {
+        if (\defined('MODULE_ORDER_TOTAL_SHIPPING_FREE_SHIPPING')) {
           if (MODULE_ORDER_TOTAL_SHIPPING_FREE_SHIPPING != 'false') {
-            if (defined('CLICSHOPPING_APP_FREE_SHIPPING_AMOUNT_FS_AMOUNT')) {
+            if (\defined('CLICSHOPPING_APP_FREE_SHIPPING_AMOUNT_FS_AMOUNT')) {
               if (CLICSHOPPING_APP_FREE_SHIPPING_AMOUNT_FS_AMOUNT != 0) {
                 $free_amount = CLICSHOPPING::getDef('module_login_info_customers_text_free_amount') . CLICSHOPPING_APP_FREE_SHIPPING_AMOUNT_FS_AMOUNT . ' ' . DEFAULT_CURRENCY;
               }
@@ -70,7 +70,7 @@
     }
 
     public function check() {
-      return defined('MODULE_LOGIN_INFO_CUSTOMERS_STATUS');
+      return \defined('MODULE_LOGIN_INFO_CUSTOMERS_STATUS');
     }
 
     public function install() {

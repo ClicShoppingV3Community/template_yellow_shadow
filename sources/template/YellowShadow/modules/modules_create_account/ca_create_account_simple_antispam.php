@@ -14,8 +14,8 @@
   use ClicShopping\Apps\Configuration\Antispam\Classes\AntispamClass;
 
   class ca_create_account_simple_antispam {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -28,12 +28,12 @@
       $this->title = CLICSHOPPING::getDef('modules_create_account_simple_antispam_title');
       $this->description = CLICSHOPPING::getDef('modules_create_account_simple_antispam_description');
 
-      if (defined('MODULES_CREATE_ACCOUNT_SIMPLE_ANTISPAM_STATUS')) {
+      if (\defined('MODULES_CREATE_ACCOUNT_SIMPLE_ANTISPAM_STATUS')) {
         $this->sort_order = (int)MODULES_CREATE_ACCOUNT_SIMPLE_ANTISPAM_SORT_ORDER;
         $this->enabled = (MODULES_CREATE_ACCOUNT_SIMPLE_ANTISPAM_STATUS == 'True');
       }
 
-      if ((!defined('CLICSHOPPING_APP_ANTISPAM_AM_SIMPLE_STATUS') || CLICSHOPPING_APP_ANTISPAM_AM_SIMPLE_STATUS == 'False') && (!defined('CLICSHOPPING_APP_ANTISPAM_CREATE_ACCOUNT') || CLICSHOPPING_APP_ANTISPAM_CREATE_ACCOUNT == 'False')) {
+      if ((!\defined('CLICSHOPPING_APP_ANTISPAM_AM_SIMPLE_STATUS') || CLICSHOPPING_APP_ANTISPAM_AM_SIMPLE_STATUS == 'False') && (!\defined('CLICSHOPPING_APP_ANTISPAM_CREATE_ACCOUNT') || CLICSHOPPING_APP_ANTISPAM_CREATE_ACCOUNT == 'False')) {
          $this->enabled = false;
       }
     }
@@ -64,7 +64,7 @@
     }
 
     public function check() {
-      return defined('MODULES_CREATE_ACCOUNT_SIMPLE_ANTISPAM_STATUS');
+      return \defined('MODULES_CREATE_ACCOUNT_SIMPLE_ANTISPAM_STATUS');
     }
 
     public function install() {

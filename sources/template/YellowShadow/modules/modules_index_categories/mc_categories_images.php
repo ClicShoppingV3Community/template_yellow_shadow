@@ -14,8 +14,8 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class mc_categories_images {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('module_index_categories_images_title');
       $this->description = CLICSHOPPING::getDef('module_index_categories_images_description');
 
-      if (defined('MODULE_INDEX_CATEGORIES_IMAGES_STATUS')) {
+      if (\defined('MODULE_INDEX_CATEGORIES_IMAGES_STATUS')) {
         $this->sort_order = MODULE_INDEX_CATEGORIES_IMAGES_SORT_ORDER;
         $this->enabled = (MODULE_INDEX_CATEGORIES_IMAGES_STATUS == 'True');
       }
@@ -158,7 +158,7 @@
     }
 
     public function check() {
-      return defined('MODULE_INDEX_CATEGORIES_IMAGES_STATUS');
+      return \defined('MODULE_INDEX_CATEGORIES_IMAGES_STATUS');
     }
 
     public function install() {

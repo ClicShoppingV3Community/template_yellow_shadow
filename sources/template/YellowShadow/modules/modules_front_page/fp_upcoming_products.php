@@ -15,8 +15,8 @@
   use ClicShopping\OM\HTML;
 
   class fp_upcoming_products {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -29,7 +29,7 @@
       $this->title = CLICSHOPPING::getDef('module_front_page_upcoming_products_title');
       $this->description = CLICSHOPPING::getDef('module_front_page_upcoming_products_description');
 
-      if (defined('MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_STATUS')) {
+      if (\defined('MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_STATUS')) {
         $this->sort_order = MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_SORT_ORDER;
         $this->enabled = (MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_STATUS == 'True');
       }
@@ -144,7 +144,7 @@
     }
 
     public function check() {
-      return defined('MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_STATUS');
+      return \defined('MODULE_FRONT_PAGE_UPCOMING_PRODUCTS_STATUS');
     }
 
     public function install() {

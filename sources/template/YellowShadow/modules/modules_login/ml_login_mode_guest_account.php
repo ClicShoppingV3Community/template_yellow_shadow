@@ -12,8 +12,8 @@
   use ClicShopping\OM\Registry;
   use ClicShopping\OM\CLICSHOPPING;
   class ml_login_mode_guest_account {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -26,7 +26,7 @@
       $this->title = CLICSHOPPING::getDef('module_login_mode_guest_account_title');
       $this->description = CLICSHOPPING::getDef('module_login_mode_guest_account_description');
 
-      if (defined('MODULE_LOGIN_MODE_GUEST_ACCOUNT_STATUS')) {
+      if (\defined('MODULE_LOGIN_MODE_GUEST_ACCOUNT_STATUS')) {
         $this->sort_order = MODULE_LOGIN_MODE_GUEST_ACCOUNT_SORT_ORDER;
         $this->enabled = (MODULE_LOGIN_MODE_GUEST_ACCOUNT_STATUS == 'True');
       }
@@ -58,7 +58,7 @@
     }
 
     public function check() {
-      return defined('MODULE_LOGIN_MODE_GUEST_ACCOUNT_STATUS');
+      return \defined('MODULE_LOGIN_MODE_GUEST_ACCOUNT_STATUS');
     }
 
     public function install() {

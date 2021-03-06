@@ -15,8 +15,8 @@
   use ClicShopping\OM\Registry;
 
   class mc_categories_description {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -29,7 +29,7 @@
       $this->title = CLICSHOPPING::getDef('module_index_categories_description_title');
       $this->description = CLICSHOPPING::getDef('module_index_categories_description_description');
 
-      if (defined('MODULE_INDEX_CATEGORIES_DESCRIPTION_STATUS')) {
+      if (\defined('MODULE_INDEX_CATEGORIES_DESCRIPTION_STATUS')) {
         $this->sort_order = (int)MODULE_INDEX_CATEGORIES_DESCRIPTION_SORT_ORDER;
         $this->enabled = (MODULE_INDEX_CATEGORIES_DESCRIPTION_STATUS == 'True');
       }
@@ -65,7 +65,7 @@
     }
 
     public function check() {
-      return defined('MODULE_INDEX_CATEGORIES_DESCRIPTION_STATUS');
+      return \defined('MODULE_INDEX_CATEGORIES_DESCRIPTION_STATUS');
     }
 
     public function install() {

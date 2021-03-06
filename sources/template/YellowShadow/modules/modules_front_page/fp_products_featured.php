@@ -14,8 +14,8 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class fp_products_featured {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('module_front_page_products_featured_title');
       $this->description = CLICSHOPPING::getDef('module_front_page_products_featured_description');
 
-      if (defined('MODULE_FRONT_PAGE_PRODUCTS_FEATURED_STATUS')) {
+      if (\defined('MODULE_FRONT_PAGE_PRODUCTS_FEATURED_STATUS')) {
         $this->sort_order = MODULE_FRONT_PAGE_PRODUCTS_FEATURED_SORT_ORDER;
         $this->enabled = (MODULE_FRONT_PAGE_PRODUCTS_FEATURED_STATUS == 'True');
       }
@@ -188,7 +188,7 @@
 
 
 // **************************************************
-// Button Free - Must be above getProductsExhausted
+// Button Free - Must be above getProductsSoldOut
 // **************************************************
               if ($CLICSHOPPING_ProductsCommon->getProductsOrdersView($products_id) != 1 && NOT_DISPLAY_PRICE_ZERO == 'false') {
                 $submit_button = HTML::button(CLICSHOPPING::getDef('text_products_free'), '', $products_name_url, 'danger');
@@ -200,10 +200,10 @@
               }
 
 // **************************
-// Display an information if the stock is exhausted for all groups
+// Display an information if the stock is sold_out for all groups
 // **************************
-              if (!empty($CLICSHOPPING_ProductsCommon->getProductsExhausted($products_id))) {
-                $submit_button = $CLICSHOPPING_ProductsCommon->getProductsExhausted($products_id);
+              if (!empty($CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id))) {
+                $submit_button = $CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id);
                 $min_quantity = 0;
                 $input_quantity = '';
                 $min_order_quantity_products_display = '';
@@ -242,7 +242,7 @@
                 $tag = $CLICSHOPPING_ProductsFunctionTemplate->getProductsHeadTag($products_id);
 
                 $products_tag = '';
-                if (isset($tag) && is_array($tag)) {
+                if (isset($tag) && \is_array($tag)) {
                   foreach ($tag as $value) {
                     $products_tag .= '#<span class="productTag">' . HTML::link(CLICSHOPPING::link(null, 'Search&keywords='. HTML::outputProtected(utf8_decode($value) .'&search_in_description=1&categories_id=&inc_subcat=1'), 'rel="nofollow"'), $value) . '</span> ';
                   }
@@ -286,7 +286,7 @@
     }
 
     public function check() {
-      return defined('MODULE_FRONT_PAGE_PRODUCTS_FEATURED_STATUS');
+      return \defined('MODULE_FRONT_PAGE_PRODUCTS_FEATURED_STATUS');
     }
 
     public function install() {

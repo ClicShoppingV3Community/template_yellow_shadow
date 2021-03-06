@@ -23,8 +23,8 @@
   use ClicShopping\Apps\Configuration\TemplateEmail\Classes\Shop\TemplateEmail;
 
   class ml_login_paypal_login {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -37,14 +37,14 @@
 
       $this->title = CLICSHOPPING::getDef('module_content_paypal_login_title');
       $this->description = CLICSHOPPING::getDef('module_content_paypal_login_description');
-      $this->sort_order = defined('MODULE_PAYPAL_LOGIN_SORT_ORDER') ? MODULE_PAYPAL_LOGIN_SORT_ORDER : 0;
+      $this->sort_order = \defined('MODULE_PAYPAL_LOGIN_SORT_ORDER') ? MODULE_PAYPAL_LOGIN_SORT_ORDER : 0;
 
-      if (defined('CLICSHOPPING_APP_PAYPAL_LOGIN_STATUS')) {
-        if (defined('MODULE_PAYPAL_LOGIN_STATUS')) {
+      if (\defined('CLICSHOPPING_APP_PAYPAL_LOGIN_STATUS')) {
+        if (\defined('MODULE_PAYPAL_LOGIN_STATUS')) {
           $this->enabled = (MODULE_PAYPAL_LOGIN_STATUS == 'True');
         }
 
-        if (defined('MODULE_PAYPAL_LOGIN_STATUS') && defined('CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_CLIENT_ID') && CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_CLIENT_ID == 'Test' ) {
+        if (\defined('MODULE_PAYPAL_LOGIN_STATUS') && \defined('CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_CLIENT_ID') && CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_CLIENT_ID == 'Test' ) {
           $this->title .= ' [Sandbox]';
         }
 
@@ -72,8 +72,8 @@
 
 
       if ( $this->enabled === true ) {
-        if ( ((MODULE_PAYPAL_LOGIN_STATUS == 'True') && (defined('CLICSHOPPING_APP_PAYPAL_LOGIN_LIVE_CLIENT_ID') || defined('CLICSHOPPING_APP_PAYPAL_LOGIN_LIVE_SECRET'))) ||
-          ((MODULE_PAYPAL_LOGIN_STATUS == 'True') && (defined('CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_CLIENT_ID') || defined('CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_SECRET')))) {
+        if ( ((MODULE_PAYPAL_LOGIN_STATUS == 'True') && (\defined('CLICSHOPPING_APP_PAYPAL_LOGIN_LIVE_CLIENT_ID') || \defined('CLICSHOPPING_APP_PAYPAL_LOGIN_LIVE_SECRET'))) ||
+          ((MODULE_PAYPAL_LOGIN_STATUS == 'True') && (\defined('CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_CLIENT_ID') || \defined('CLICSHOPPING_APP_PAYPAL_LOGIN_SANDBOX_SECRET')))) {
           $this->description .= '<div class="alert alert-warning" role="alert">' . $this->app->getDef('module_login_error_credentials') . '</div>';
 
           $this->enabled = false;
@@ -91,7 +91,7 @@
         return false;
       }
 
-      if (!defined('CLICSHOPPING_APP_PAYPAL_LOGIN_ATTRIBUTES')) {
+      if (!\defined('CLICSHOPPING_APP_PAYPAL_LOGIN_ATTRIBUTES')) {
         return false;
       }
 
@@ -113,7 +113,7 @@
           foreach ( $scopes as $group => $attributes ) {
             foreach ( $attributes as $attribute => $scope ) {
               if ( $a == $attribute ) {
-                if ( !in_array($scope, $use_scopes)) {
+                if ( !\in_array($scope, $use_scopes)) {
                   $use_scopes[] = $scope;
                 }
               }
@@ -274,7 +274,7 @@
 // odoo web service
 //***************************************
 /*
-                if (defined('CLICSHOPPING_APP_WEBSERVICE_ODOO_ACTIVATE_WEB_SERVICE') && (CLICSHOPPING_APP_WEBSERVICE_ODOO_ACTIVATE_WEB_SERVICE == 'True' && CLICSHOPPING_APP_WEBSERVICE_ODOO_ACTIVATE_CUSTOMERS_CATALOG == 'True')) {
+                if (\defined('CLICSHOPPING_APP_WEBSERVICE_ODOO_ACTIVATE_WEB_SERVICE') && (CLICSHOPPING_APP_WEBSERVICE_ODOO_ACTIVATE_WEB_SERVICE == 'True' && CLICSHOPPING_APP_WEBSERVICE_ODOO_ACTIVATE_CUSTOMERS_CATALOG == 'True')) {
                   require_once(DIR_EXT .'odoo_xmlrpc/xml_rpc_catalog_create_account_paypal.php');
                 }
 */
@@ -414,8 +414,8 @@
 
 // Register PayPal Express Checkout as the default payment method
           if ( !isset($_SESSION['payment']) || ($_SESSION['payment'] != 'Payment\PayPal\EC')) {
-            if (defined('MODULE_PAYMENT_INSTALLED') && !empty(MODULE_PAYMENT_INSTALLED)) {
-              if ( in_array('Payment\PayPal\EC', explode(';', MODULE_PAYMENT_INSTALLED))) {
+            if (\defined('MODULE_PAYMENT_INSTALLED') && !empty(MODULE_PAYMENT_INSTALLED)) {
+              if ( \in_array('Payment\PayPal\EC', explode(';', MODULE_PAYMENT_INSTALLED))) {
                 $ppe = new PaymentModuleEC();
 
                 if ( $ppe->enabled ) {
@@ -435,7 +435,7 @@
     }
 
     public function check() {
-      return defined('MODULE_PAYPAL_LOGIN_STATUS');
+      return \defined('MODULE_PAYPAL_LOGIN_STATUS');
     }
 
     public function install() {

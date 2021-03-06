@@ -32,14 +32,14 @@ use ClicShopping\OM\CLICSHOPPING;
                   <div class="separator"></div>
                   <div class="row">
                     <div class="col-md-12">
-                      <label for="inputAddressEmailLogin" class="sr-only"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_email_address'); ?></label>
+                      <label for="inputAddressEmailLogin" class="visually-hidden"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_email_address'); ?></label>
                       <span class="col-md-3 float-start text-md-left headerMultiTemplateDefaultLoginText"  id="inputAddressEmailLogin"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_email_address'); ?></span>
                       <span class="col-md-9 float-end"><?php echo HTML::inputField('email_address', null, 'id="inputAddressEmail" autocomplete="username" aria-describedby="' . CLICSHOPPING::getDef('modules_header_multi_template_header_email_address') . '" placeholder="' . CLICSHOPPING::getDef('modules_header_multi_template_header_email_address') . '"', 'email'); ?></span>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <label for="inputAddressPasswordLogin" class="sr-only"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_account_password'); ?></label>
+                      <label for="inputAddressPasswordLogin" class="visually-hidden"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_account_password'); ?></label>
                       <span class="col-md-3 float-start text-md-left headerMultiTemplateDefaultPasswordText" id="inputAddressPasswordLogin"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_account_password'); ?></span>
                       <span class="col-md-9 float-end"><?php echo HTML::inputField('password', null, 'id="current-password" autocomplete="current-password" aria-describedby="' . CLICSHOPPING::getDef('modules_header_multi_template_account_password') . '" placeholder="' . CLICSHOPPING::getDef('modules_header_multi_template_account_password') . '"', 'password'); ?></span>
                     </div>
@@ -89,7 +89,7 @@ use ClicShopping\OM\CLICSHOPPING;
     </span>
 
       <span class="col-lg-4 col-sm-12 text-md-center">
-        <a class="navbar-brand"><?php echo $logo_header; ?></a>
+        <span class="navbar-brand"><?php echo $logo_header; ?></span>
       </span>
 
 

@@ -4,8 +4,8 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class ml_login_social_network_twitter {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -19,7 +19,7 @@
       $this->description = CLICSHOPPING::getDef('module_login_social_network_twitter_description');
 
 
-      if (defined('MODULE_LOGIN_SOCIAL_NETWORK_TWITTER_STATUS')) {
+      if (\defined('MODULE_LOGIN_SOCIAL_NETWORK_TWITTER_STATUS')) {
         $this->sort_order = MODULE_LOGIN_SOCIAL_NETWORK_TWITTER_SORT_ORDER;
         $this->enabled = (MODULE_LOGIN_SOCIAL_NETWORK_TWITTER_STATUS == 'True');
       }
@@ -92,7 +92,7 @@
     }
 
     public function check() {
-      return defined('MODULE_LOGIN_SOCIAL_NETWORK_TWITTER_STATUS');
+      return \defined('MODULE_LOGIN_SOCIAL_NETWORK_TWITTER_STATUS');
     }
 
     public function install() {
