@@ -12,8 +12,9 @@
 use ClicShopping\OM\CLICSHOPPING;
 ?>
 <div class="col-md-<?php echo $bootstrap_column; ?> col-md-<?php echo $bootstrap_column; ?>">
-  <div class="card-deck-wrapper">
-    <div class="card-deck">
+  <div class="card-wrapper">
+    <div class="card"
+>
       <div class="card card-footer">
           <div>
             <?php echo $ticker; ?>
@@ -46,7 +47,7 @@ use ClicShopping\OM\CLICSHOPPING;
 ?>
               </div>
               <div class="hr"></div>
-              <ul class="list-inline">
+              <ul>
 <?php
   if (!empty($min_order_quantity_products_display)) {
 ?>

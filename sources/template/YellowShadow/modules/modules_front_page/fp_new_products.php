@@ -228,7 +228,7 @@
               }
 
 // **************************
-// Display an information if the stock is sold_out for all groups
+// Display an information if the stock is sold out for all groups
 // **************************
               if (!empty($CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id))) {
                 $submit_button = $CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id);

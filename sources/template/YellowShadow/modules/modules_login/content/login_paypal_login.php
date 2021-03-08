@@ -23,7 +23,7 @@ use ClicShopping\OM\CLICSHOPPING;
   }
 ?>
       <p><?php echo CLICSHOPPING::getDef('module_content_paypal_login_template_content'); ?></p>
-      <div id="PayPalLoginButton" class="text-md-right"></div>
+      <div id="PayPalLoginButton" class="text-end"></div>
   </div>
 </div>
 

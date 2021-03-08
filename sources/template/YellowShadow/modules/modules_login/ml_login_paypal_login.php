@@ -208,7 +208,6 @@
                                     'customers_lastname' => $customers_lastname,
                                     'customers_email_address' => $email_address,
                                     'customers_telephone' => null,
-                                    'customers_fax' => null,
                                     'customers_newsletter' => '0',
                                     'languages_id' => (int)$CLICSHOPPING_Language->getId(),
 //                                        'customers_password' => Hash::encrypt($customer_password),
@@ -257,7 +256,7 @@
                 ;
                 $from = STORE_OWNER_EMAIL_ADDRESS;
 
-                $CLICSHOPPING_Mail->send($name, $email_address, '', $from, $email_subject);
+                $CLICSHOPPING_Mail->send($name, $email_address, null, $from, $email_subject);
 
 // e-mail de notification a l'administrateur
                 $admin_email_welcome = utf8_decode(html_entity_decode(ADMIN_EMAIL_WELCOME));

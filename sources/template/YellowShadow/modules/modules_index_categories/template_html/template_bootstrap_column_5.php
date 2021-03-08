@@ -13,8 +13,9 @@ use ClicShopping\OM\CLICSHOPPING;
 ?>
 <div class="col-md-<?php echo $bootstrap_column; ?> col-md-<?php echo $bootstrap_column; ?>">
   <div style="padding-top:1rem;"></div>
-  <div class="card-deck-wrapper">
-    <div class="card-deck">
+  <div class="card-wrapper">
+    <div class="card"
+>
       <div class="card shadow">
         <div class="card-block">
           <div class="separator"></div>
@@ -53,7 +54,7 @@ use ClicShopping\OM\CLICSHOPPING;
   }
 ?>
           </div>
-          <div class="text-md-center">
+          <div class="text-center">
             <div class="ModulesIndexCategoriesBoostrapColumn5TextPrice" ><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price; ?></div>
           </div>
           <?php echo $form; ?>

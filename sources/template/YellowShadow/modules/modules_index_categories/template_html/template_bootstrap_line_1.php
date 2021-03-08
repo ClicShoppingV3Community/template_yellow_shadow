@@ -14,13 +14,13 @@ use ClicShopping\OM\CLICSHOPPING;
 <div class="col-md-<?php echo $bootstrap_column; ?> col-md-<?php echo $bootstrap_column; ?>">
   <div>
     <div class="col-md-2 float-start">
-      <div class="text-md-center ModulesIndexCategoriesBoostrapLine1Image">
+      <div class="text-center ModulesIndexCategoriesBoostrapLine1Image">
         <?php echo $products_image; ?>
       </div>
     </div>
     <div class="col-md-6 float-start">
       <div>
-        <div class="text-md-center ModulesIndexCategoriesBoostrapLine1Title"><h3><?php echo $products_name; ?></h3></div>
+        <div class="text-center ModulesIndexCategoriesBoostrapLine1Title"><h3><?php echo $products_name; ?></h3></div>
       </div>
 <?php
   if (!empty($products_short_description)) {
@@ -31,7 +31,7 @@ use ClicShopping\OM\CLICSHOPPING;
 <?php
   }
 ?>
-      <div class="text-md-center">
+      <div class="text-center">
 <?php
   if (!empty($products_stock)) {
 ?>
@@ -47,7 +47,7 @@ use ClicShopping\OM\CLICSHOPPING;
       </div>
     </div>
     <div class="col-md-4 float-end">
-      <div class="text-md-center">
+      <div class="text-center">
         <div class="ModulesIndexCategoriesBoostrapLine1TextPrice"><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price . $ticker; ?></div>
       </div>
       <div>
@@ -63,7 +63,7 @@ use ClicShopping\OM\CLICSHOPPING;
   }
 ?>
       <?php echo $form; ?>
-        <div class="text-md-center">
+        <div class="text-center">
           <div class="ModulesIndexCategoriesBoostrapLine1QuantityMinOrder"><?php echo $input_quantity; ?></div>
           <div style="padding-top:5px;">
             <span class="ModulesIndexCategoriesBoostrapLine1ViewDetails"><label for="ModulesIndexCategoriesBoostrapLine1ViewDetails"><?php echo $button_small_view_details; ?></label>&nbsp;</span>

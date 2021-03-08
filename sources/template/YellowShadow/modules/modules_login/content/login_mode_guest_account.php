@@ -28,8 +28,8 @@
         <div class="text-rmd-ight">
           <div class="control-group">
             <div class="separator"></div>
-            <div class="controls">
-              <div class="buttonSet text-md-right"><?php echo HTML::button(CLICSHOPPING::getDef('button_text_guest_customer'), null, CLICSHOPPING::link(null, 'Account&CreateGuestAccount'), 'info'); ?></div>
+            <div>
+              <div class="buttonSet text-end"><?php echo HTML::button(CLICSHOPPING::getDef('button_text_guest_customer'), null, CLICSHOPPING::link(null, 'Account&CreateGuestAccount'), 'info'); ?></div>
             </div>
           </div>
         </div>

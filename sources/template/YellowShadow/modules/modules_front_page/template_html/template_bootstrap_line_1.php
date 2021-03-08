@@ -31,7 +31,7 @@ use ClicShopping\OM\CLICSHOPPING;
 <?php
   }
 ?>
-      <div class="text-md-center">
+      <div class="text-center">
 <?php
   if (!empty($products_stock)) {
 ?>
@@ -47,7 +47,7 @@ use ClicShopping\OM\CLICSHOPPING;
       </div>
     </div>
     <div class="col-md-4 float-end">
-      <div class="text-md-center">
+      <div class="text-center">
         <div class="ModulesFrontPageBoostrapLine1TextPrice"><?php echo CLICSHOPPING::getDef('text_price') . ' ' . $product_price . $ticker; ?></div>
       </div>
       <div>
@@ -63,7 +63,7 @@ use ClicShopping\OM\CLICSHOPPING;
   }
 ?>
       <?php echo $form; ?>
-        <div class="text-md-center">
+        <div class="text-center">
           <div class="ModulesFrontPageBoostrapLine1QuantityMinOrder"><?php echo $input_quantity; ?></div>
           <div style="padding-top:5px;">
             <span class="ModulesFrontPageBoostrapLine1ViewDetails"><label for="ModulesFrontPageBoostrapLine1ViewDetails"><?php echo $button_small_view_details; ?></label>&nbsp;</span>

@@ -51,12 +51,12 @@
           $bootstrap_column = (int)MODULE_INDEX_CATEGORIES_IMAGES_BOX_COLUMNS;
 
 
-          if ($CLICSHOPPING_Category->getPath() && strpos('_', (string)$CLICSHOPPING_Category->getPath())) {
+          if ($CLICSHOPPING_Category->getPath() && strpos((string)$CLICSHOPPING_Category->getPath(), '_')) {
 
 // check to see if there are deeper categories within the current category
             $category_links = array_reverse($cPath_array);
 
-           // for($i=0, $n=count($category_links); $i<$n; $i++) {
+           // for($i=0, $n=\count($category_links); $i<$n; $i++) {
              foreach($category_links as $value) {
 
               $Qcategories = $CLICSHOPPING_Db->prepare('select count(*) as total
@@ -125,7 +125,7 @@
 
             $categories_content = '<!-- Categories Images start -->' . "\n";
             $categories_content .= '<div class="separator"></div>';
-            $categories_content .= '<div class="d-flex flex-wrap text-md-center">';
+            $categories_content .= '<div class="d-flex flex-wrap text-center">';
 
             $categories = $Qcategories->fetchAll();
 
