@@ -29,7 +29,7 @@
     public $description;
     public ?int $sort_order = 0;
     public bool $enabled = false;
-    public $app;
+    public mixed $app;
 
     public function __construct() {
       $this->code = get_class($this);
@@ -96,7 +96,7 @@
       }
 
 
-      if (isset($_GET['Account']) && isset($_GET['LogIn'])) {
+      if (isset($_GET['Account'], $_GET['LogIn'])) {
         if (isset($_GET['action'])) {
           if ($_GET['action'] == 'paypal_login') {
             $this->preLogin();

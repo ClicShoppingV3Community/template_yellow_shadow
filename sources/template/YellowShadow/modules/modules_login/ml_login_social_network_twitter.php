@@ -28,7 +28,7 @@
     public function execute() {
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      if (isset($_GET['Account']) && isset($_GET['LogIn'])) {
+      if (isset($_GET['Account'], $_GET['LogIn'])) {
         $template = '<!-- login_social_network_ start -->' . "\n";
 
 /*

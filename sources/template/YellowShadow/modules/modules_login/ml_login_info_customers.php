@@ -37,7 +37,7 @@
 
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      if (isset($_GET['Account']) && isset($_GET['LogIn'])) {
+      if (isset($_GET['Account'], $_GET['LogIn'])) {
 
         $content_width = (int)MODULE_LOGIN_INFO_CUSTOMERS_CONTENT_WIDTH;
 

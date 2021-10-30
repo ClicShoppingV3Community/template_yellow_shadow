@@ -16,8 +16,8 @@
   class ml_login_connexion {
     public string $code;
     public string $group;
-    public string $title;
-    public string $description;
+    public $title;
+    public $description;
     public ?int $sort_order = 0;
     public bool $enabled = false;
 
@@ -38,7 +38,7 @@
 
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      if (isset($_GET['Account']) && isset($_GET['LogIn'])) {
+      if (isset($_GET['Account'], $_GET['LogIn'])) {
 
         $content_width = (int)MODULE_LOGIN_CONNEXION_CONTENT_WIDTH;
 

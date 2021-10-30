@@ -35,7 +35,7 @@
     public function execute() {
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      if (isset($_GET['Account']) && isset($_GET['LogIn'])) {
+      if (isset($_GET['Account'], $_GET['LogIn'])) {
         $content_width = (int)MODULE_LOGIN_MODE_GUEST_ACCOUNT_CONTENT_WIDTH;
 
         if (MODE_MANAGEMENT_B2C_B2B == 'B2C_B2B' || MODE_B2B_B2C == 'false')  {
